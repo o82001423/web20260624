@@ -1,0 +1,27 @@
+<script src="https://code.jquery.com/jquery-3.7.1.js" 
+integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready (function(){
+        let url ="./data02.php"
+        $.ajax({
+            type:"get",
+            url: url,
+            // data: "data",
+             dataType:"json",
+            success:function(res){
+                console.log('res',res);
+                console.log('res typeof', typeof(res));
+
+                console.error('res[0]',res[0]);
+                console.error('res[1]',res[1]);
+                console.error('res[2]',res[2]);
+                
+                
+            }
+        })
+    });
+
+
+</script>
